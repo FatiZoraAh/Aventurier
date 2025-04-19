@@ -3,6 +3,22 @@
 Ce projet est une simulation de déplacements d’un aventurier sur une carte ASCII, avec détection des murs et des limites de la carte.
 
 ---
+## 🧱 Structure du Projet
+
+Le projet est divisé en deux **branches**, afin de montrer l’évolution du travail :
+
+### 🔹 `main` – Version initiale (manuelle)
+- Lecture de la carte et des mouvements depuis les fichiers (`carte.txt`, `deplacements.txt`)
+- Exécution de la logique avec affichage de la position finale
+- Pensée comme une première étape pour valider manuellement le fonctionnement
+
+### 🔹 `master` – Version finale (automatisée et testée)
+- Ajout de tests automatisés avec **JUnit**
+- Plus besoin de modifier manuellement le fichier `deplacements.txt`
+- Plusieurs scénarios de test prédéfinis sont inclus
+- Réorganisation du code avec une architecture plus claire et modulaire
+
+---
 
 ## ⚙️ Fonctionnalités
 
@@ -39,8 +55,22 @@ Ensuite, la simulation a été encapsulée dans une méthode testable et automat
 
 ## ✅ Résultat final
 
+### Mode manuel (branche `main`) :
+- Modifier `deplacements.txt` selon les mouvements souhaités
+- Exécuter `Main.java` pour obtenir la position finale
+
+### Mode automatique (branche `master`)
 - Compilation via :
   ```bash
   javac -cp "lib/junit-platform-console-standalone-1.10.0.jar" -d out src/aventurier/*.java test/aventurier/*.java
   Puis:
   java -jar lib/junit-platform-console-standalone-1.10.0.jar -cp out --scan-class-path
+
+---
+
+## 🙌 Remerciements
+
+Merci pour cette opportunité.  
+Ce projet m’a permis de démontrer ma capacité à construire une solution progressive, testable et maintenable.
+
+Fatima Zahrae
